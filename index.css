@@ -1,0 +1,324 @@
+
+/* Layout/Style */
+:root {
+    --font_color: white;
+    --second_color: #FFCFC4;
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image:linear-gradient(166deg, #f79738 8%, rgba(250,125,0,1) 32%, rgba(199,153,52,1) 73%);
+
+    height: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    z-index: -2;
+}
+.inner_background {
+    position: relative;
+    z-index: -1;
+    background-color:var(--second_color);
+    
+}
+/* Navigation */
+
+.nav {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    height: 7.5%;
+    width: 100%;
+    z-index: 1;
+    padding-top: 1%;
+}
+.nav_background {
+    position: relative;
+    z-index: 2;
+    background-image:linear-gradient(0deg, rgba(247,151,56,0.5) 0%, rgba(247,151,56,0.5) 100%);
+    width: 75%;
+    border-radius: 10pt 10pt 10pt 10pt;
+}
+.nav_background > ul {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
+    color: var(--font_color);
+}
+.nav_background > ul > li {
+    margin: 1%;
+    width: 150px;
+}
+li > a, a:hover, a:focus, a:active, a:visited {
+    color: var(--font_color);
+    text-decoration: none;
+}
+
+
+/* Title Slide */
+#title {
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows: 10% 40% 40% 10%;
+    height: 75%;
+    width: 80%;
+}
+#title > span {
+    color: var(--font_color);
+}
+#title > span:nth-of-type(1) {
+    position: relative;
+    left: 20%;
+    font-size: 80pt;
+    grid-column:1 ;
+    grid-row:2 ;
+    align-self: center;
+    justify-self: center;
+}
+#title > span:nth-of-type(2) {
+    position: relative;
+    right: 20%;
+    font-size: 80pt;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+}
+#title > span:nth-of-type(3) {
+    position: relative;
+    top: 40%;
+    font-size: 60pt;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+}
+#title > span:nth-of-type(4) {
+    position: relative;
+    left: 15%;
+    font-size: 80pt;
+    grid-column: 1;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+}
+#title > span:nth-of-type(5) {
+    position: relative;
+    right: 15%;
+    font-size: 80pt;
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+}
+hr {
+    position: relative;
+    top: 2%;
+    display: grid;
+    grid-column: 1 / span 2;
+    align-self: center;
+    justify-self: center;
+    grid-row: 2 / span 2;
+    border: none;
+    background-color: var(--font_color);
+    height: 1%;
+    width: 40%;
+}
+
+/* Problem Slide */
+
+#problem {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 5% 15% 50% 30%;
+    height: 90%;
+    width: 95%;
+}
+.image_wheel {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    grid-column: 1;
+    grid-row: 3;
+}
+img {
+    height: 85%;
+    width: 60%;
+    border-radius: 10pt;
+}
+
+.problem_points {
+    color: var(--font_color);
+    display: flex;
+    gap: 5%;
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 4;
+}
+.problem_points > li {
+    font-size: 17.5pt;
+}
+.point_title {
+    align-self: center;
+    font-size: 22.5pt;
+}
+.problem_title {
+    color: var(--font_color);
+    justify-self: center;
+    font-size: 80pt;
+    grid-column: 1;
+    grid-row: 2;
+}
+.problem_desc {
+    color: var(--font_color);
+    line-height: 1.5;
+    font-size: 17.5pt;
+    width: 90%;
+}
+.problem_scroll {
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    grid-column: 2;
+    grid-row: 3;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+
+/* Solution Side*/
+#solution {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+    height: 90%;
+    width: 95%;
+}
+.solution_bullet_points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 22% 13% 13% 13% 13% 13% 13%  ;
+    }
+    .main_points {
+        display: flex;
+        flex-direction: column;
+        grid-row:2 /span 5;
+        grid-column: 1;
+        gap: 15%;
+        color: var(--font_color);
+    }
+    .main_solutions {
+        position: relative;
+        top: 5%;
+        display: flex;
+        flex-direction: column;
+        grid-row:2 /span 5;
+        grid-column: 2;
+        gap: 15%;
+        color: var(--font_color);
+    }
+    .solution_text_box {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:22% 65% 13%;
+    }
+    .solution_scroll > p {
+        color: var(--font_color);
+        line-height: 1.5;
+        font-size: 17.5pt;
+        width: 90%;
+    }
+    .solution_scroll {
+        height: 100%;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        grid-column: 1;
+        grid-row: 2;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .solution_title {
+        color: var(--font_color);
+        align-self: center;
+        justify-self: center;
+        grid-column:1 /span 2 ;
+        grid-row: 1;
+        font-size: 80pt;
+    }
+
+
+
+/* Sites Slide*/
+#sites {
+    display: grid;
+    grid-template-columns: 15% 15% 15% 10% 15% 15% 15%;
+    grid-template-rows:5% 10% 40% 5% 15% 20% 5%;
+    height: 90%;
+    width: 95%;
+}
+#footer > p {
+    color: var(--font_color)
+}
+#footer {
+    height: 4%;
+}
+.sites_title {
+    grid-row: 2;
+    grid-column:3 / span 3;
+    font-size: 60pt;
+    justify-self: center;
+    color: var(--font_color);
+}
+.sites_desc {
+    grid-row: 3;
+    grid-column: 2 /span 5;
+    font-size: 40pt;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    width: 80%;
+    color: var(--font_color);
+}
+#sites > hr {
+    width: 100%;
+    border-radius: 10pt;
+    height: 5%;
+    grid-row: 4;
+    grid-column:2 / span 5;
+
+}
+#sites > ul {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    font-size: 20pt;
+    gap: 44%;
+    grid-row: 5 / span 2;
+    grid-column: 2 / span 5;
+    color: var(--font_color);
+    list-style-type: none;
+}
