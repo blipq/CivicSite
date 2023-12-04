@@ -427,8 +427,8 @@ img {
     .main_points {
         left: 10%;
         top: 2%;
-        gap: 15%;
-        font-size: 17.5pt;
+        gap: 16%;
+        font-size: 15.5pt;
     }
     .point_desc {
         top: 11%;
@@ -466,7 +466,7 @@ img {
         left: 10%;
         top: -1%;
         gap: 15%;
-        font-size: 17.5pt;
+        font-size: 14.5pt;
     }
     .point_desc {
         top: 5%;
@@ -496,15 +496,14 @@ img {
     /* Solutions Page */
     .main_points {
         left: 10%;
-        top: 2%;
-        gap: 12%;
-        font-size: 17.5pt;
+        top: 1%;
+        gap: 13%;
+        font-size: 13.5pt;
     }
     .point_desc {
-        top: 11%;
         left: 12.5%;
-        gap: 8%;
-        font-size: 11.5pt;
+        gap: 11%;
+        font-size: 10.5pt;
         width: 100%;
     }
     #text_box {
@@ -584,6 +583,6 @@ img {
         top: 5%;
     }
     .point_desc {
-        top: 9%;
+        top: 10%;
     }
 }
