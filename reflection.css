@@ -1,8 +1,8 @@
 
 /* Layout/Style */
 :root {
-    --font_color: white;
-    --second_color: #FFCFC4;
+    --font_color: #ffffff;
+    --second_color: #ff977f;
 }
 * {
     margin: 0;
